@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div style="background: url(kong.jpg); background-size: cover; background-position-y: 120%">
+<div class="overlay" style="width: 100%; height: 100vh; background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)) ;padding: 25px 100px; display:flex; flex-direction: column">
+    <div style="width:100%;height: 10%; display:flex; justify-content: space-between; align-items: center">
+        <div class="left" style="display:flex; align-items: center">
+            <h4 style="padding-right: 25px"><i class="fa fa-video" style="padding-right: 10px"></i>CINEMA</h4>
+            <span style="border: 1px solid #ddd; border-radius: 25px; padding: 10px 20px; color: #ddd"><i class="fa fa-play-circle" style="padding-right: 10px"></i>All movies</span>
+        </div>
+        <div class="right" style="display:flex; align-items: center">
+            <span style="padding-right: 100px"><i class="fa fa-globe" style="padding-right: 10px"></i><b>Warsaw</b>, Poland <i class="fa fa-chevron-down" style="padding-left:5px"></i></span>
+            <div style="width:25px;height:25px;border-radius:50%;background:url('tupac.jpeg'); background-size:cover; margin-right: 10px"></div>
+            <% if current_user %>
+                <span style="padding-right: 50px"><%= link_to current_user.email, user_path(current_user) %></span>
+                <span style="padding-right: 50px"><%= link_to 'Log out', destroy_user_session_path, data: { 'turbo-method': :delete } %></span>
+            <% else %>
+                <span style="padding-right: 50px"><%= link_to 'Login', new_user_session_path %></span>
+            <% end %>
+            <span style="padding-right: 25px"><i class="fa fa-search" style=""></i></span>
+            <span><i class="fa fa-bars" style=""></i></span>
+        </div>
+    </div>
+    
+    <div style="width:100%;height: 30%;">
+    </div>
+    
+   
+    <div style="width:100%;height: 40%; display: flex">
+        <div class="m-left" style="width:40%;">
+            <div style="width:100%; height:25%; display:flex; align-items: flex-end">
+                <h1 style="padding: 0 15px 0 0; margin: 0; font-size: 5em; line-height: 0.95em; font-weight: 100">01</h1>
+                <h2 style="padding: 0 0 0 0; margin: 0; font-size: 2em; line-height: 1.1em; font-weight: 700">Kong: <br>Skull Island</h2>
+            </div>
+            <div style="width:100%; height:10%; display:flex; align-items: flex-end">
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star unchecked"></span>
+                </div>
+                <div>
+                <p><b>Genre: </b>Action, Adventure, Fantasy</p>
+                </div>
+            </div>
+            <div style="width:100%; height:20%; display:flex; align-items: flex-end">
+                <p><b>Session schedule:</b></p>
+            </div>
+            <div style="width:100%; height:15%; display:flex; align-items: flex-end; color: #aaa">
+                <span style="border: 1px solid #aaa; padding: 5px 10px; border-radius: 15px; margin-right: 10px">10:30</span>
+                <span style="border: 1px solid #aaa; padding: 5px 10px; border-radius: 15px; margin-right: 10px">12:00</span>
+                <span style="border: 1px solid #aaa; padding: 5px 10px; border-radius: 15px; margin-right: 10px">13:30</span>
+                <span style="border: 1px solid #aaa; padding: 5px 10px; border-radius: 15px">16:00</span>
+            </div>
+            <div style="width:100%; height:30%; display:flex; align-items: flex-end">
+                <div style="background: orange; color: #000; border: 1px solid orange; font-weight: bold; padding: 10px 20px; border-radius: 25px; margin-right: 25px"><i class="fa fa-ticket" style="padding-right: 10px"></i>Buy tickets</div>
+                <div style="background: transparent; color: #fff; border: 1px solid #aaa; padding: 10px 20px; border-radius: 25px">Read More <i class="fa fa-arrow-right" style="padding-left: 10px"></i></div>
+            </div>
+        </div>
+        <div class="m-center" style="width:10%; display:flex; align-items:flex-end; justify-content:center">
+            <span class="arrow" style="margin-right: 10px"><i class="fa fa-chevron-left" style=""></i></span>
+            <span class="arrow"><i class="fa fa-chevron-right" style=""></i></span>
+        </div>
+        <div class="m-right" style="width:50%; display:flex; justify-content: space-between">
+            <div style="width:25%; height: 100%; background: url('mulan.jpg'); background-size:cover"></div>
+            <div style="width:25%; height: 100%; background: url('blade.jpg'); background-size:cover"></div>
+            <div style="width:25%; height: 100%; background: url('widow.jpg'); background-size:cover"></div>
+            <div style="width:15%; height: 100%; background: url('wonder.jpg'); background-size:cover"></div>
+        </div>
+        
+    </div>
+    
+    <div style="width:100%; margin-top: 50px">
+    <h1 style="margin-bottom: 10px">Coming Soon</h1>    
+    <p style="padding: 0; margin: 0; color: #aaa">Upcoming movies recommended for you</p>
+    </div>
+        
+</div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+<style>
+    
+/* Reset domyślnych styli przeglądarki */
+*, *::before, *::after {
+    box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* Podstawowe style elementów */
+
+html, body {
+    font-family: "Helvetica";
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    line-height: 1;
+    vertical-align: baseline;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: #fff;
+    font-size: 1rem;
+    scroll-behavior: smooth;
+    background: #202020;
+}
+    
+    p, span {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .stars {
+        padding-right: 25px
+    }
+    
+    .stars span {
+        padding-right: 4px;
+        font-size: 12px;
+    }
+    
+    .stars .checked {
+        color: orange;
+    }
+    
+    .arrow {
+        border: 2px solid #fff; border-radius:50%; padding: 10px 14px; 
+        transition: all .5s;
+    }
+    
+    .arrow:hover {
+        background: #fff;
+        color: #202020;
+        transition: all .5s;
+    }
+    
+    .m-right div {
+        transform: scale(1);
+        box-shadow: 0px 21px 24px 0px rgba(0,0,0,0.1);
+        transition: all .25s;
+    }
+    
+    .m-right div:hover {
+          transform: scale(1.1);
+        box-shadow: 0px 21px 24px 0px rgba(0,0,0, 1);
+        transition: all 1s;
+    }
+    
+    .m-right div:last-of-type:hover {
+          transform: scale(1);
+        transition: all 1s;
+    }
+    
+
+</style>
